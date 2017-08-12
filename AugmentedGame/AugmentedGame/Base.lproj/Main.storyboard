@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L40-jd-oi3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Augmented Reality-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AugmentedGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxA-vh-NBo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="632"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pQ7-oY-tLv">
+                                <rect key="frame" x="0.0" y="632" width="375" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqo-QM-UQw">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-XP-hSy">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="35"/>
+                                        <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PlayAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qM-5Y-3C1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6P-mV-IUz">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pQ7-oY-tLv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="37H-bG-kcp"/>
+                            <constraint firstItem="pQ7-oY-tLv" firstAttribute="top" secondItem="DxA-vh-NBo" secondAttribute="bottom" id="8Ll-H0-DXG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pQ7-oY-tLv" secondAttribute="bottom" id="cCm-aV-gcD"/>
+                            <constraint firstAttribute="trailing" secondItem="DxA-vh-NBo" secondAttribute="trailing" id="jJ0-Qz-koL"/>
+                            <constraint firstItem="DxA-vh-NBo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jy6-ch-c9k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DxA-vh-NBo" secondAttribute="bottom" constant="35" id="mcx-sJ-3Kx"/>
+                            <constraint firstAttribute="trailing" secondItem="pQ7-oY-tLv" secondAttribute="trailing" id="qbv-9d-LcM"/>
+                            <constraint firstItem="DxA-vh-NBo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qir-gX-tjf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Augmented Reality" id="FJd-Ty-brX"/>
+                    <connections>
+                        <outlet property="counterlabel" destination="xqo-QM-UQw" id="fm3-2c-7Le"/>
+                        <outlet property="sceneview" destination="DxA-vh-NBo" id="r2s-I6-YUK"/>
+                        <outlet property="timerlabel" destination="q6P-mV-IUz" id="DsW-yj-WXr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fos-49-dTT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L40-jd-oi3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ty-ak-zIA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8mw-mb-KOE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FT3-i2-jQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="137"/>
+        </scene>
+    </scenes>
+</document>
